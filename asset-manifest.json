@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nizamsalim/saveonshopping-blog/static/css/main.a2e4ddbc.css",
+    "main.js": "/nizamsalim/saveonshopping-blog/static/js/main.cea28e71.js",
+    "index.html": "/nizamsalim/saveonshopping-blog/index.html",
+    "main.a2e4ddbc.css.map": "/nizamsalim/saveonshopping-blog/static/css/main.a2e4ddbc.css.map",
+    "main.cea28e71.js.map": "/nizamsalim/saveonshopping-blog/static/js/main.cea28e71.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2e4ddbc.css",
+    "static/js/main.cea28e71.js"
+  ]
+}
