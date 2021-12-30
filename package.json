@@ -1,7 +1,6 @@
 {
   "name": "saveonshopping_blog",
   "version": "1.0.0",
-  "homepage": "https://github.com/nizamsalim/saveonshopping-blog/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
