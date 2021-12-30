@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { ClipLoader } from "react-spinners";
 import axios from "axios";
