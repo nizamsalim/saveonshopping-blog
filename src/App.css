@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.item {
+  flex-direction: column;
+  display: flex;
+}
+@media screen and (min-width: 968px) {
+  .wrapper {
+    width: 50%;
+  }
+  .item {
+    flex-direction: row;
+    display: flex;
+  }
+}

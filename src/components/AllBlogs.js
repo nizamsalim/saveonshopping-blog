@@ -1,0 +1,35 @@
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import BlogItem from "./BlogItem";
+import { ClipLoader } from "react-spinners";
+
+function AllBlogs() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    setIsLoading(true);
+    const url =
+      "https://saveonshopping-server.herokuapp.com/api/blog/getallblogs";
+    axios.get(url).then((response) => {
+      setBlogs(response.data.blogs);
+      setIsLoading(false);
+    });
+    return () => {};
+  }, []);
+  return (
+    <div>
+      <div className="container mt-4">
+        <h1 className="text-center mb-3">Blogs</h1>
+        <div className="text-center">
+          <ClipLoader loading={isLoading} />
+        </div>
+        {blogs &&
+          blogs.map((blog, ind) => {
+            return <BlogItem blog={blog} key={ind} />;
+          })}
+      </div>
+    </div>
+  );
+}
+
+export default AllBlogs;
