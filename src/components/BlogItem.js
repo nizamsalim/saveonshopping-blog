@@ -1,6 +1,6 @@
 import React from "react";
 
-function BlogItem({ blog }) {
+function BlogItem({ blog, deleteBlog }) {
   return (
     <div
       className="mb-5 item"
@@ -19,6 +19,10 @@ function BlogItem({ blog }) {
         <p style={{ paddingRight: 10 }}>{blog.description}</p>
         <p> Posted On {blog.postedOn} </p>
         <p> By {blog.author.name} </p>
+        <i
+          className="fas fa-trash mb-2 btn"
+          onClick={() => deleteBlog(blog._id)}
+        />
       </div>
     </div>
   );
