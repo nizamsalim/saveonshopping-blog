@@ -16,6 +16,23 @@ function AllBlogs() {
     });
     return () => {};
   }, []);
+
+  const deleteBlog = async (blogId) => {
+    const url = `https://saveonshopping-server.herokuapp.com/api/blog/delete/${blogId}`;
+    axios.delete(url).then((response) => {
+      console.log(response.data);
+      if (response.data.success) {
+        const newBlogs = blogs.filter((blog, ind) => {
+          return blog._id !== blogId;
+        });
+        setBlogs(newBlogs);
+        return;
+      }
+      alert("Error while deleting blog");
+    });
+    console.log(blogId);
+  };
+
   return (
     <div>
       <div className="container mt-4">
@@ -25,7 +42,7 @@ function AllBlogs() {
         </div>
         {blogs &&
           blogs.map((blog, ind) => {
-            return <BlogItem blog={blog} key={ind} />;
+            return <BlogItem blog={blog} key={ind} deleteBlog={deleteBlog} />;
           })}
       </div>
     </div>
